@@ -1,0 +1,7 @@
+# Copy this file to .dev.vars for local development.
+# .dev.vars is gitignored and must never be committed.
+#
+# Local development is served from http://localhost:8788/ (no base path),
+# so override the production BASE_PATH here.
+APP_ENV=development
+BASE_PATH=

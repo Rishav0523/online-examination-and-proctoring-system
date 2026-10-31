@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <title>Examination Management | Online Examination System</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#432B20">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/royal-bengal.css">
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar" id="admin-sidebar"></aside>
+  <div class="sidebar-backdrop"></div>
+  <div class="admin-main">
+    <header class="admin-topbar" id="admin-topbar"></header>
+    <main class="admin-content">
+      <div class="page-head">
+        <div>
+          <span class="page-eyebrow">Assessments</span>
+          <h1>Examination management</h1>
+          <p>Create examinations, schedule their window, control publication and review student attempts.</p>
+        </div>
+        <div class="page-actions">
+          <button class="btn btn-maroon" type="button" id="createExamButton">
+            <i class="bi bi-plus-lg me-1"></i>Create examination
+          </button>
+        </div>
+      </div>
+
+      <div id="examSummary" class="stats-grid mb-3"></div>
+
+      <div class="section-block">
+        <div class="section-block-head">
+          <h2>All examinations</h2>
+          <div class="d-flex gap-2 flex-wrap">
+            <input class="form-control form-control-sm" type="search" id="examSearch" placeholder="Search examinations" aria-label="Search examinations" style="max-width:230px;">
+            <select class="form-select form-select-sm" id="examStatusFilter" aria-label="Filter by status" style="max-width:170px;">
+              <option value="all">All statuses</option>
+              <option value="draft">Draft</option>
+              <option value="published">Published</option>
+              <option value="active">Active</option>
+              <option value="closed">Closed</option>
+            </select>
+          </div>
+        </div>
+        <div id="examsTable">
+          <div class="rb-table-wrap">
+            <div class="table-empty"><span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Loading examinations…</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages/admin-exams.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <title>My Results | Online Examination System</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#432B20">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/royal-bengal.css">
+</head>
+<body>
+  <div id="student-nav"></div>
+
+  <main class="student-main">
+    <div class="rb-container">
+      <div class="page-head">
+        <div>
+          <span class="page-eyebrow">Student records</span>
+          <h1>Published results</h1>
+          <p>Only results released by the examination administrator are shown here.</p>
+        </div>
+        <div class="page-actions">
+          <a class="btn btn-soft" href="student/dashboard/"><i class="bi bi-arrow-left me-1"></i>Dashboard</a>
+        </div>
+      </div>
+      <div id="resultsRoot">
+        <div class="empty-state">
+          <div class="empty-icon"><span class="spinner-border spinner-border-sm" aria-hidden="true"></span></div>
+          <h3>Loading results</h3>
+          <p>Retrieving your published examination results.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="student-footer"></div>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages/student-results.js" defer></script>
+</body>
+</html>

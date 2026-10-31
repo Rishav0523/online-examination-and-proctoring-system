@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <title>Examination Details | Online Examination System</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#432B20">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/royal-bengal.css">
+</head>
+<body>
+  <div id="student-nav"></div>
+
+  <main class="student-main">
+    <div class="rb-container">
+      <nav class="breadcrumb-rb" aria-label="Breadcrumb">
+        <a href="student/dashboard/">Dashboard</a><span>/</span>Examination details
+      </nav>
+      <div id="examRoot">
+        <div class="empty-state">
+          <div class="empty-icon"><span class="spinner-border spinner-border-sm" aria-hidden="true"></span></div>
+          <h3>Loading examination</h3>
+          <p>Retrieving examination details and instructions.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="student-footer"></div>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages/student-exam.js" defer></script>
+</body>
+</html>

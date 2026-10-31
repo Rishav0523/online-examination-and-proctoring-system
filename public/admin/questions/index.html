@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <title>Question Bank | Online Examination System</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#432B20">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/royal-bengal.css">
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar" id="admin-sidebar"></aside>
+  <div class="sidebar-backdrop"></div>
+  <div class="admin-main">
+    <header class="admin-topbar" id="admin-topbar"></header>
+    <main class="admin-content">
+      <div class="page-head">
+        <div>
+          <span class="page-eyebrow">Assessments</span>
+          <h1>Question bank</h1>
+          <p>Browse every multiple-choice question across all examinations. Questions are managed inside their examination.</p>
+        </div>
+        <div class="page-actions">
+          <a class="btn btn-soft" href="admin/exams/"><i class="bi bi-journal-bookmark me-1"></i>Examinations</a>
+        </div>
+      </div>
+
+      <div class="rb-card mb-3">
+        <div class="rb-card-body">
+          <form class="filter-bar" id="questionFilters" role="search">
+            <div class="filter-item filter-grow">
+              <label class="form-label" for="questionSearch">Search</label>
+              <input class="form-control" type="search" id="questionSearch" name="search" placeholder="Question text or examination title" maxlength="200">
+            </div>
+            <div class="filter-item">
+              <label class="form-label" for="questionExam">Examination</label>
+              <select class="form-select" id="questionExam" name="examId">
+                <option value="">All examinations</option>
+              </select>
+            </div>
+            <div class="filter-item">
+              <button class="btn btn-soft" type="button" id="resetQuestionFilters">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="section-block">
+        <div class="section-block-head">
+          <h2>Questions</h2>
+          <span class="form-text" id="questionCount">Loading…</span>
+        </div>
+        <div id="questionsTable">
+          <div class="rb-table-wrap">
+            <div class="table-empty"><span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Loading questions…</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages/admin-questions.js" defer></script>
+</body>
+</html>

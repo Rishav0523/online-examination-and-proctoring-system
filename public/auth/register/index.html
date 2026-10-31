@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <title>Student Registration | Online Examination System</title>
+  <meta name="description" content="Create a student account for the Online Examination and Proctoring System.">
+  <meta name="theme-color" content="#432B20">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/royal-bengal.css">
+</head>
+<body data-page="register" class="bg-ivory">
+  <div id="site-header"></div>
+
+  <main class="auth-section">
+    <div class="rb-container w-100">
+      <div class="auth-grid">
+        <aside class="auth-aside">
+          <div>
+            <div class="brand-text">
+              <span class="brand-title">Online Examination System</span>
+              <span class="brand-sub">Secure Digital Examination Portal</span>
+            </div>
+            <h2>Create your <em>student account.</em></h2>
+            <p>Register once to access every examination your institution makes available to you.</p>
+            <ul class="auth-feature-list">
+              <li><i class="bi bi-person-badge"></i><span>Your student ID must be unique in the system.</span></li>
+              <li><i class="bi bi-key"></i><span>Use at least 8 characters with a letter and a number.</span></li>
+              <li><i class="bi bi-envelope-check"></i><span>Use the email address associated with your student record.</span></li>
+            </ul>
+          </div>
+          <p class="auth-aside-footer mb-0">Administrator accounts are never created through public registration.</p>
+        </aside>
+
+        <div class="auth-main">
+          <span class="page-eyebrow">Student registration</span>
+          <h1>Create an account</h1>
+          <p class="auth-subtitle">Complete all fields. Your student ID and email address must not already be registered.</p>
+
+          <form id="registerForm" novalidate>
+            <div class="form-grid">
+              <div class="full">
+                <label class="form-label" for="fullName">Full name</label>
+                <input class="form-control" type="text" id="fullName" name="fullName" autocomplete="name" maxlength="120" required placeholder="As it appears in your student record">
+              </div>
+              <div>
+                <label class="form-label" for="studentId">Student ID / roll number</label>
+                <input class="form-control" type="text" id="studentId" name="studentId" maxlength="32" required placeholder="CSE2024001">
+                <div class="form-text">3–32 letters, numbers, dots, dashes or underscores.</div>
+              </div>
+              <div>
+                <label class="form-label" for="email">Email address</label>
+                <input class="form-control" type="email" id="email" name="email" autocomplete="email" maxlength="254" required placeholder="you@example.edu">
+              </div>
+              <div>
+                <label class="form-label" for="department">Department</label>
+                <input class="form-control" type="text" id="department" name="department" maxlength="100" required placeholder="Computer Science and Engineering">
+              </div>
+              <div>
+                <label class="form-label" for="semester">Semester</label>
+                <select class="form-select" id="semester" name="semester" required>
+                  <option value="">Select semester</option>
+                  <option value="1">Semester 1</option>
+                  <option value="2">Semester 2</option>
+                  <option value="3">Semester 3</option>
+                  <option value="4">Semester 4</option>
+                  <option value="5">Semester 5</option>
+                  <option value="6">Semester 6</option>
+                  <option value="7">Semester 7</option>
+                  <option value="8">Semester 8</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label" for="password">Password</label>
+                <div class="input-group">
+                  <input class="form-control" type="password" id="password" name="password" autocomplete="new-password" minlength="8" maxlength="128" required placeholder="At least 8 characters">
+                  <button class="password-toggle" type="button" data-password-toggle="password" aria-label="Show password"><i class="bi bi-eye"></i></button>
+                </div>
+              </div>
+              <div>
+                <label class="form-label" for="confirmPassword">Confirm password</label>
+                <div class="input-group">
+                  <input class="form-control" type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" maxlength="128" required placeholder="Repeat your password">
+                  <button class="password-toggle" type="button" data-password-toggle="confirmPassword" aria-label="Show password"><i class="bi bi-eye"></i></button>
+                </div>
+              </div>
+              <div class="full">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="acknowledge" name="acknowledge" required>
+                  <label class="form-check-label" for="acknowledge">
+                    I have read the <a href="./#instructions" target="_blank" rel="noopener">general examination instructions</a> and understand that monitored examinations require webcam consent.
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-maroon w-100 btn-lg mt-3" type="submit" id="registerButton">
+              <i class="bi bi-person-plus me-2"></i>Create student account
+            </button>
+          </form>
+
+          <div class="auth-link-row">
+            Already registered? <a href="auth/login/">Sign in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages/auth.js" defer></script>
+</body>
+</html>

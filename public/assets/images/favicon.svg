@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Online Examination System">
+  <rect width="64" height="64" rx="14" fill="#432B20"/>
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#B58A45" stroke-width="1.5" opacity=".85"/>
+  <path d="M14 27.5 32 19l18 8.5L32 36 14 27.5Z" fill="#D5B778"/>
+  <path d="M22 32.5V40c0 2.8 4.5 4.8 10 4.8s10-2 10-4.8v-7.5L32 37l-10-4.5Z" fill="#F5F0E6"/>
+  <path d="M49 28.5v8.2" stroke="#D5B778" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="49" cy="39" r="2.4" fill="#762D3F" stroke="#D5B778" stroke-width="1.2"/>
+</svg>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="./">
+  <title>Online Examination &amp; Proctoring System | Secure Digital Examination Portal</title>
+  <meta name="description" content="A secure, transparent and efficient digital platform for conducting online examinations with timed attempts, automatic evaluation and browser-based monitoring.">
+  <meta name="theme-color" content="#432B20">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/royal-bengal.css">
+</head>
+<body data-page="home">
+  <a class="visually-hidden-focusable position-absolute top-0 start-0 p-2 bg-cream" href="#main">Skip to content</a>
+
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="rb-container">
+        <div class="hero-grid">
+          <div>
+            <span class="hero-kicker">Royal Bengal Examination Portal</span>
+            <h1 class="hero-title" id="hero-title">Welcome to the <span class="accent">Online Examination</span> System</h1>
+            <p class="hero-lead">
+              A secure, transparent and efficient digital platform for conducting online examinations
+              with integrated monitoring and automated evaluation.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-maroon btn-lg" href="auth/login/">
+                <i class="bi bi-box-arrow-in-right me-2"></i>Student Login
+              </a>
+              <a class="btn btn-outline-brown btn-lg" href="auth/register/">
+                <i class="bi bi-person-plus me-2"></i>Create Student Account
+              </a>
+            </div>
+            <div class="hero-assurance">
+              <span><i class="bi bi-shield-check"></i>Server-authoritative timing</span>
+              <span><i class="bi bi-clipboard-check"></i>Automatic evaluation</span>
+              <span><i class="bi bi-eye"></i>Events reviewed by administrators</span>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <span class="hero-plate" aria-hidden="true"></span>
+            <figure class="hero-frame mb-0">
+              <img src="assets/images/hero-exam.png" width="1024" height="1024" alt="Illustration of a formal examination desk with an answer sheet, fountain pen and a graduation cap in the Royal Bengal ivory, maroon and gold palette.">
+            </figure>
+            <div class="hero-float-card" aria-hidden="true">
+              <span class="icon-circle"><i class="bi bi-check2-circle"></i></span>
+              <div>
+                <strong>Answers saved as you go</strong>
+                <small>Refresh-safe attempts and a server-tracked timer.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capability strip -->
+    <section class="capability-bar" aria-label="Platform capabilities">
+      <div class="rb-container">
+        <div class="capability-grid">
+          <div class="capability">
+            <i class="bi bi-person-lock"></i>
+            <div><strong>Secure authentication</strong><small>Hashed passwords and role-based access</small></div>
+          </div>
+          <div class="capability">
+            <i class="bi bi-stopwatch"></i>
+            <div><strong>Authoritative timing</strong><small>Deadlines enforced on the server</small></div>
+          </div>
+          <div class="capability">
+            <i class="bi bi-camera-video"></i>
+            <div><strong>Browser-based monitoring</strong><small>Visible, consented, and reviewable</small></div>
+          </div>
+          <div class="capability">
+            <i class="bi bi-graph-up-arrow"></i>
+            <div><strong>Instant evaluation</strong><small>Results generated on submission</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructions -->
+    <section class="rb-section" id="instructions" aria-labelledby="instructions-title">
+      <div class="rb-container">
+        <div class="section-head center">
+          <span class="section-kicker">Before you begin</span>
+          <h2 class="section-title" id="instructions-title">General examination instructions</h2>
+          <p class="section-lead">
+            These rules apply to every examination hosted on this portal. Individual examinations may
+            include additional instructions that take precedence.
+          </p>
+        </div>
+
+        <div class="instruction-panel">
+          <div class="instruction-head">
+            <span class="head-icon"><i class="bi bi-journal-check"></i></span>
+            <div>
+              <h3>Read carefully before starting an examination</h3>
+              <p>You will be asked to confirm that you have read and understood these instructions.</p>
+            </div>
+          </div>
+          <ol class="instruction-list">
+            <li><span class="num">1</span><span>Read all examination instructions carefully before starting.</span></li>
+            <li><span class="num">2</span><span>Ensure that you have a stable internet connection.</span></li>
+            <li><span class="num">3</span><span>Use a supported desktop browser for the best experience.</span></li>
+            <li><span class="num">4</span><span>Allow webcam access when it is requested by the examination.</span></li>
+            <li><span class="num">5</span><span>Keep your face visible during monitored examinations.</span></li>
+            <li><span class="num">6</span><span>Avoid switching browser tabs during the examination.</span></li>
+            <li><span class="num">7</span><span>Do not exit fullscreen mode unless you are permitted to do so.</span></li>
+            <li><span class="num">8</span><span>Read every question carefully before choosing an answer.</span></li>
+            <li><span class="num">9</span><span>Review your answers before final submission.</span></li>
+            <li><span class="num">10</span><span>Submit before the examination timer expires.</span></li>
+            <li><span class="num">11</span><span>The system may automatically submit an examination after the time expires.</span></li>
+            <li><span class="num">12</span><span>Unusual browser or webcam events may be recorded for administrative review.</span></li>
+            <li><span class="num">13</span><span>A detected event is not automatically proof of misconduct.</span></li>
+          </ol>
+          <p class="instruction-note">
+            <strong>Important:</strong> A recorded event is an indicator for review, not a finding of guilt.
+            Administrators consider context, repeated patterns and any explanation before drawing conclusions.
+            See <a href="#privacy">monitoring and privacy</a> for details about what is and is not collected.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="rb-section tinted" id="how-it-works" aria-labelledby="how-title">
+      <div class="rb-container">
+        <div class="section-head center">
+          <span class="section-kicker">The workflow</span>
+          <h2 class="section-title" id="how-title">How the system works</h2>
+          <p class="section-lead">From registration to published results, every step is recorded in the examination database.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <h3>Register an account</h3>
+            <p>Create a student account with your name, roll number, department and semester.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <h3>Log in to the portal</h3>
+            <p>Sign in with your email address or student ID and your password.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <h3>Select an examination</h3>
+            <p>Choose from the examinations that are currently available to you.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">04</span>
+            <h3>Read and consent</h3>
+            <p>Review the instructions and provide explicit consent for monitoring where applicable.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">05</span>
+            <h3>Attempt the questions</h3>
+            <p>Answer the questions within the displayed duration, with answers saved as you proceed.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">06</span>
+            <h3>Submit the examination</h3>
+            <p>Review your responses and submit. The server evaluates your attempt automatically.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">07</span>
+            <h3>View results</h3>
+            <p>Results appear after the administrator releases them for that examination.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="rb-section" id="features" aria-labelledby="features-title">
+      <div class="rb-container">
+        <div class="section-head">
+          <span class="section-kicker">Platform capabilities</span>
+          <h2 class="section-title" id="features-title">Designed for fair, dependable digital assessment</h2>
+          <p class="section-lead">Every component works together on Cloudflare Workers and a D1 database.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon"><i class="bi bi-shield-lock"></i></span>
+            <h3>Secure authentication</h3>
+            <p>Salted password hashing, HTTP-only session cookies, CSRF protection and role-based authorization.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon"><i class="bi bi-hourglass-split"></i></span>
+            <h3>Timed examinations</h3>
+            <p>Start and end windows are validated on the server, and refreshing never resets your remaining time.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon"><i class="bi bi-collection"></i></span>
+            <h3>Question bank management</h3>
+            <p>Administrators build multiple-choice questions with four options, marks and a defined order.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon"><i class="bi bi-calculator"></i></span>
+            <h3>Automatic evaluation</h3>
+            <p>Submissions are evaluated on the backend, producing marks, percentage and pass or fail status.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon"><i class="bi bi-camera-video"></i></span>
+            <h3>Webcam monitoring</h3>
+            <p>With explicit consent, the browser checks for face presence and multiple faces using a local model.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon"><i class="bi bi-window-stack"></i></span>
+            <h3>Browser activity monitoring</h3>
+            <p>Tab switches, loss of window focus and fullscreen exits are recorded as reviewable indicators.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon"><i class="bi bi-clipboard-data"></i></span>
+            <h3>Result management</h3>
+            <p>Administrators release results when ready; students see only results that have been published.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon"><i class="bi bi-clock-history"></i></span>
+            <h3>Examination history</h3>
+            <p>Students and administrators can review past attempts, scores and recorded proctoring events.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="rb-section tinted" id="about" aria-labelledby="about-title">
+      <div class="rb-container">
+        <div class="about-grid">
+          <div class="about-copy">
+            <div class="section-head mb-3">
+              <span class="section-kicker">About the platform</span>
+              <h2 class="section-title" id="about-title">A dependable examination environment</h2>
+            </div>
+            <p>
+              The Online Examination and Proctoring System is an institutional-style digital assessment
+              platform. It brings student accounts, examination scheduling, question management, secure
+              attempts and automatic evaluation into one consistent application.
+            </p>
+            <p>
+              Each attempt is tied to a server-recorded start time and a fixed deadline. Answers are stored
+              against the attempt as the student proceeds, so a refresh or temporary connection problem does
+              not erase progress. On submission, the backend evaluates the attempt and stores the result.
+              Administrators decide when results become visible to students.
+            </p>
+            <p>
+              Browser-based monitoring is intentionally transparent. Students see the webcam preview,
+              receive visible warnings, and must provide consent before a monitored examination starts.
+              No webcam images or recordings are stored. Recorded events are presented to administrators
+              for human review, with an explicit reminder that an event alone does not establish misconduct.
+            </p>
+          </div>
+          <aside class="about-facts" aria-label="Platform principles">
+            <h3>Principles</h3>
+            <div class="fact-row">
+              <i class="bi bi-server"></i>
+              <div><strong>Authoritative backend</strong><span>Timing, evaluation and result calculation happen on the server, not in the browser.</span></div>
+            </div>
+            <div class="fact-row">
+              <i class="bi bi-eye-slash"></i>
+              <div><strong>Data minimisation</strong><span>No biometric templates, webcam images or recordings are stored by this application.</span></div>
+            </div>
+            <div class="fact-row">
+              <i class="bi bi-person-check"></i>
+              <div><strong>Human review</strong><span>Proctoring indicators are reviewed by administrators before any conclusion is drawn.</span></div>
+            </div>
+            <div class="fact-row">
+              <i class="bi bi-universal-access"></i>
+              <div><strong>Accessible by design</strong><span>Keyboard-friendly controls, visible focus states and responsive layouts.</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Monitoring and privacy -->
+    <section class="rb-section" id="privacy" aria-labelledby="privacy-title">
+      <div class="rb-container">
+        <div class="section-head center">
+          <span class="section-kicker">Monitoring and privacy</span>
+          <h2 class="section-title" id="privacy-title">What monitoring can and cannot observe</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-5">
+            <div class="rb-card h-100">
+              <div class="rb-card-body">
+                <h3 class="h6 fw-bold text-brown mb-3"><i class="bi bi-check2-circle me-2 text-gold"></i>Recorded with consent</h3>
+                <ul class="rule-list">
+                  <li><i class="bi bi-camera-video"></i><span>Whether a face is visible in the webcam preview.</span></li>
+                  <li><i class="bi bi-people"></i><span>Whether more than one face appears in the preview.</span></li>
+                  <li><i class="bi bi-plug"></i><span>When the camera stream stops or is disconnected.</span></li>
+                  <li><i class="bi bi-window"></i><span>Tab switches, loss of window focus and fullscreen exits.</span></li>
+                  <li><i class="bi bi-clock"></i><span>Timestamps and a severity level for each event.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="rb-card h-100">
+              <div class="rb-card-body">
+                <h3 class="h6 fw-bold text-brown mb-3"><i class="bi bi-slash-circle me-2 text-maroon"></i>Not claimed or collected</h3>
+                <ul class="rule-list">
+                  <li><i class="bi bi-x-circle"></i><span>Reliable detection of other applications, physical devices or external help.</span></li>
+                  <li><i class="bi bi-x-circle"></i><span>Webcam images, audio or video recordings.</span></li>
+                  <li><i class="bi bi-x-circle"></i><span>Facial recognition or stored biometric templates.</span></li>
+                  <li><i class="bi bi-x-circle"></i><span>Silent camera activation of any kind.</span></li>
+                </ul>
+                <p class="form-note mt-3 mb-0">
+                  A browser can only observe events it is permitted to see. Detected events may have innocent
+                  explanations and are provided to administrators as indicators, never as automatic verdicts.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="rb-section pt-0">
+      <div class="rb-container">
+        <div class="cta-band">
+          <h2>Ready to begin your examination?</h2>
+          <p>Sign in to view the examinations available to you. If you do not have an account yet, registration takes only a minute.</p>
+          <div class="cta-actions">
+            <a class="btn btn-gold btn-lg" href="auth/login/"><i class="bi bi-box-arrow-in-right me-2"></i>Student Login</a>
+            <a class="btn btn-outline-ivory btn-lg" href="auth/register/"><i class="bi bi-person-plus me-2"></i>Create Student Account</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="rb-section pt-0" id="contact" aria-labelledby="contact-title">
+      <div class="rb-container">
+        <div class="section-head center">
+          <span class="section-kicker">Support</span>
+          <h2 class="section-title" id="contact-title">Contact</h2>
+          <p class="section-lead">
+            For account, examination or result queries, contact your examination administrator or the
+            department conducting the examination. Include your student ID and the examination title.
+          </p>
+        </div>
+        <div class="info-panel mx-auto" style="max-width: 720px;">
+          <strong>Administrators:</strong> administrative access is provisioned by the institution and is not
+          available through public registration.
+          <a class="ms-1 fw-semibold" href="auth/admin/">Open the administrator sign-in page</a>.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages/home.js" defer></script>
+</body>
+</html>

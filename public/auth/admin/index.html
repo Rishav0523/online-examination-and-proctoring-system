@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <title>Administrator Login | Online Examination System</title>
+  <meta name="description" content="Restricted administrator sign-in for the Online Examination and Proctoring System.">
+  <meta name="theme-color" content="#432B20">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/royal-bengal.css">
+</head>
+<body data-page="admin-login" class="bg-ivory">
+  <div id="site-header"></div>
+
+  <main class="auth-section">
+    <div class="rb-container w-100">
+      <div class="auth-grid">
+        <aside class="auth-aside">
+          <div>
+            <div class="brand-text">
+              <span class="brand-title">Online Examination System</span>
+              <span class="brand-sub">Secure Digital Examination Portal</span>
+            </div>
+            <h2>Administration, <em>restricted and accountable.</em></h2>
+            <p>This portal is reserved for authorised examination administrators. Student accounts cannot be used here.</p>
+            <ul class="auth-feature-list">
+              <li><i class="bi bi-shield-lock"></i><span>Administrator sessions are separate from student sessions.</span></li>
+              <li><i class="bi bi-journal-check"></i><span>Manage examinations, questions, results and proctoring reports.</span></li>
+              <li><i class="bi bi-eye"></i><span>Proctoring events are reviewed by a named administrator.</span></li>
+            </ul>
+          </div>
+          <p class="auth-aside-footer mb-0">Administrator accounts are provisioned through a controlled local setup script, not public registration.</p>
+        </aside>
+
+        <div class="auth-main">
+          <span class="page-eyebrow">Restricted access</span>
+          <h1>Administrator sign in</h1>
+          <p class="auth-subtitle">Enter the credentials issued by the institution.</p>
+
+          <div class="auth-notice">
+            <i class="bi bi-info-circle"></i>
+            <span>Unauthorised access attempts are rate limited. There is no public administrator registration.</span>
+          </div>
+
+          <form id="adminLoginForm" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="identifier">Administrator email</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-envelope-at"></i></span>
+                <input class="form-control" type="text" id="identifier" name="identifier" autocomplete="username" maxlength="254" required placeholder="administrator@example.edu">
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="form-label" for="password">Password</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                <input class="form-control" type="password" id="password" name="password" autocomplete="current-password" maxlength="128" required placeholder="Administrator password">
+                <button class="password-toggle" type="button" data-password-toggle="password" aria-label="Show password"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+            <button class="btn btn-brown w-100 btn-lg" type="submit" id="adminLoginButton">
+              <i class="bi bi-shield-lock me-2"></i>Sign in to administration
+            </button>
+          </form>
+
+          <div class="auth-link-row">
+            Student? <a href="auth/login/">Use the student sign-in page</a>
+          </div>
+          <div class="auth-link-row mt-2">
+            <a href="./"><i class="bi bi-arrow-left me-1"></i>Return to the public homepage</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages/auth.js" defer></script>
+</body>
+</html>

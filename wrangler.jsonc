@@ -1,0 +1,55 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "online-examination-and-proctoring-system",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-10-01",
+  "observability": {
+    "enabled": true
+  },
+
+  // Static frontend. The Worker rewrites the /projects/... prefix before
+  // serving files from this directory through the ASSETS binding.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none",
+    "run_worker_first": true
+  },
+
+  // D1 binding used consistently throughout the Worker code as env.DB.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "oeps-db",
+      "database_id": "3f2e22d6-cd13-4abb-9cc1-6d4e8c458667",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  // Only these project paths are intercepted. The portfolio at
+  // rishavprasad.in/ keeps its existing routes and configuration.
+  "routes": [
+    { "pattern": "rishavprasad.in/projects/online-examination-and-proctoring-system", "zone_name": "rishavprasad.in" },
+    { "pattern": "rishavprasad.in/projects/online-examination-and-proctoring-system/*", "zone_name": "rishavprasad.in" }
+  ],
+
+  // Production app is mounted under the portfolio subdirectory.
+  // Local development overrides this to "" through .dev.vars.
+  "vars": {
+    "APP_ENV": "production",
+    "BASE_PATH": "/projects/online-examination-and-proctoring-system",
+    "SESSION_TTL_HOURS": "12",
+    "SESSION_TTL_REMEMBER_HOURS": "720"
+  }
+
+  // NOTE: Worker routes are intentionally not committed with an account-specific
+  // zone. After deploying, attach these routes in the Cloudflare dashboard
+  // (Workers & Pages -> your Worker -> Settings -> Domains & Routes):
+  //
+  //   rishavprasad.in/projects/online-examination-and-proctoring-system
+  //   rishavprasad.in/projects/online-examination-and-proctoring-system/*
+  //
+  // Routes only intercept those paths; the portfolio at rishavprasad.in/ is
+  // untouched. See docs/deployment-guide.md for the full procedure.
+}

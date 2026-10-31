@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <title>Student Management | Online Examination System</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#432B20">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/royal-bengal.css">
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar" id="admin-sidebar"></aside>
+  <div class="sidebar-backdrop"></div>
+  <div class="admin-main">
+    <header class="admin-topbar" id="admin-topbar"></header>
+    <main class="admin-content">
+      <div class="page-head">
+        <div>
+          <span class="page-eyebrow">People</span>
+          <h1>Student management</h1>
+          <p>Review registered students, inspect attempt history and control account access.</p>
+        </div>
+      </div>
+
+      <div class="rb-card mb-3">
+        <div class="rb-card-body">
+          <form class="filter-bar" id="studentFilters" role="search">
+            <div class="filter-item filter-grow">
+              <label class="form-label" for="studentSearch">Search</label>
+              <input class="form-control" type="search" id="studentSearch" name="search" placeholder="Name, student ID or email" maxlength="200">
+            </div>
+            <div class="filter-item">
+              <label class="form-label" for="studentStatus">Account status</label>
+              <select class="form-select" id="studentStatus" name="status">
+                <option value="all">All accounts</option>
+                <option value="active">Active only</option>
+                <option value="inactive">Deactivated only</option>
+              </select>
+            </div>
+            <div class="filter-item">
+              <label class="form-label" for="studentDepartment">Department</label>
+              <select class="form-select" id="studentDepartment" name="department">
+                <option value="">All departments</option>
+              </select>
+            </div>
+            <div class="filter-item">
+              <button class="btn btn-brown" type="submit"><i class="bi bi-funnel me-1"></i>Apply filters</button>
+            </div>
+            <div class="filter-item">
+              <button class="btn btn-soft" type="button" id="resetFilters">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="section-block">
+        <div class="section-block-head">
+          <h2>Registered students</h2>
+          <span class="form-text" id="studentCount">Loading…</span>
+        </div>
+        <div id="studentsTable">
+          <div class="rb-table-wrap">
+            <div class="table-empty"><span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Loading students…</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages/admin-students.js" defer></script>
+</body>
+</html>

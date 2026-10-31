@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <title>Examination Attempt | Online Examination System</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#432B20">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/royal-bengal.css">
+</head>
+<body class="attempt-body">
+  <header class="attempt-topbar">
+    <div class="attempt-brand">
+      <span class="brand-mark"><i class="bi bi-mortarboard-fill"></i></span>
+      <div class="brand-text">
+        <span class="brand-title">Online Examination System</span>
+        <span class="brand-sub">Secure Digital Examination Portal</span>
+      </div>
+    </div>
+    <div class="attempt-exam-title">
+      <strong id="attemptExamTitle">Examination</strong>
+      <small id="attemptExamMeta">Loading attempt…</small>
+    </div>
+    <div class="attempt-tools">
+      <span class="attempt-timer" id="attemptTimer" role="timer" aria-label="Time remaining">
+        <i class="bi bi-stopwatch"></i><span id="attemptTimerText">--:--</span>
+      </span>
+      <button class="btn btn-outline-ivory" type="button" id="submitTopButton">
+        <i class="bi bi-send me-1"></i>Submit
+      </button>
+    </div>
+  </header>
+
+  <div id="proctorAlertHost"></div>
+
+  <main class="attempt-layout" id="attemptRoot">
+    <div class="empty-state" style="grid-column:1 / -1">
+      <div class="empty-icon"><span class="spinner-border spinner-border-sm" aria-hidden="true"></span></div>
+      <h3>Preparing your examination</h3>
+      <p>Loading your questions and saved answers.</p>
+    </div>
+  </main>
+
+  <div id="setupOverlayHost"></div>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/face-api/face-api.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/proctor.js" defer></script>
+  <script src="assets/js/pages/attempt.js" defer></script>
+</body>
+</html>

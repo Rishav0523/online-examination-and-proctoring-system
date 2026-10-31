@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <title>Results | Online Examination System</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#432B20">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/royal-bengal.css">
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar" id="admin-sidebar"></aside>
+  <div class="sidebar-backdrop"></div>
+  <div class="admin-main">
+    <header class="admin-topbar" id="admin-topbar"></header>
+    <main class="admin-content">
+      <div class="page-head">
+        <div>
+          <span class="page-eyebrow">Evaluation</span>
+          <h1>Results</h1>
+          <p>Server-evaluated results across all examinations. Release results when you are ready for students to see them.</p>
+        </div>
+        <div class="page-actions">
+          <a class="btn btn-soft" href="admin/exams/"><i class="bi bi-journal-bookmark me-1"></i>Examinations</a>
+        </div>
+      </div>
+
+      <div id="resultSummary" class="stats-grid mb-3"></div>
+
+      <div class="rb-card mb-3">
+        <div class="rb-card-body">
+          <form class="filter-bar" id="resultFilters" role="search">
+            <div class="filter-item filter-grow">
+              <label class="form-label" for="resultSearch">Search</label>
+              <input class="form-control" type="search" id="resultSearch" name="search" placeholder="Student name, student ID or examination" maxlength="200">
+            </div>
+            <div class="filter-item">
+              <label class="form-label" for="resultExam">Examination</label>
+              <select class="form-select" id="resultExam" name="examId">
+                <option value="">All examinations</option>
+              </select>
+            </div>
+            <div class="filter-item">
+              <button class="btn btn-soft" type="button" id="resetResultFilters">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="section-block">
+        <div class="section-block-head">
+          <h2>Evaluated results</h2>
+          <span class="form-text" id="resultCount">Loading…</span>
+        </div>
+        <div id="resultsTable">
+          <div class="rb-table-wrap">
+            <div class="table-empty"><span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Loading results…</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages/admin-results.js" defer></script>
+</body>
+</html>

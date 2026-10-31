@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <title>Proctoring Reports | Online Examination System</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#432B20">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/royal-bengal.css">
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar" id="admin-sidebar"></aside>
+  <div class="sidebar-backdrop"></div>
+  <div class="admin-main">
+    <header class="admin-topbar" id="admin-topbar"></header>
+    <main class="admin-content">
+      <div class="page-head">
+        <div>
+          <span class="page-eyebrow">Integrity</span>
+          <h1>Proctoring reports</h1>
+          <p>Browser-observable signals recorded during monitored attempts. Events are indicators, not proof of misconduct.</p>
+        </div>
+        <div class="page-actions">
+          <a class="btn btn-soft" href="admin/exams/"><i class="bi bi-journal-bookmark me-1"></i>Examinations</a>
+        </div>
+      </div>
+
+      <div id="proctorSummary" class="stats-grid mb-3"></div>
+
+      <div class="rb-card mb-3">
+        <div class="rb-card-body">
+          <form class="filter-bar" id="proctorFilters" role="search">
+            <div class="filter-item filter-grow">
+              <label class="form-label" for="proctorSearch">Search</label>
+              <input class="form-control" type="search" id="proctorSearch" name="search" placeholder="Student, examination or event type" maxlength="200">
+            </div>
+            <div class="filter-item">
+              <label class="form-label" for="proctorExam">Examination</label>
+              <select class="form-select" id="proctorExam" name="examId">
+                <option value="">All examinations</option>
+              </select>
+            </div>
+            <div class="filter-item">
+              <label class="form-label" for="proctorReview">Review status</label>
+              <select class="form-select" id="proctorReview" name="reviewStatus">
+                <option value="">All statuses</option>
+                <option value="unreviewed">Unreviewed</option>
+                <option value="reviewed">Reviewed</option>
+                <option value="dismissed">Dismissed</option>
+              </select>
+            </div>
+            <div class="filter-item">
+              <label class="form-label" for="proctorSeverity">Severity</label>
+              <select class="form-select" id="proctorSeverity" name="severity">
+                <option value="">All severities</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+            <div class="filter-item">
+              <button class="btn btn-soft" type="button" id="resetProctorFilters">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="warning-panel mb-3">
+        <i class="bi bi-info-circle me-2"></i>
+        Webcam face checks and browser focus events can produce false positives, for example when lighting changes, a face
+        is briefly out of frame, or a system notification steals focus. Review events together with the student's record
+        before drawing conclusions. No recordings are stored.
+      </div>
+
+      <div class="section-block">
+        <div class="section-block-head">
+          <h2>Recorded events</h2>
+          <span class="form-text" id="proctorCount">Loading…</span>
+        </div>
+        <div id="proctorTable">
+          <div class="rb-table-wrap">
+            <div class="table-empty"><span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Loading proctoring reports…</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages/admin-proctoring.js" defer></script>
+</body>
+</html>

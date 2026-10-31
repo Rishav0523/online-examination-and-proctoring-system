@@ -1,0 +1,28 @@
+{
+  "name": "online-examination-and-proctoring-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Secure digital examination portal with browser-based proctoring, built on Cloudflare Workers and D1.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local --port 8788",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "db:create": "wrangler d1 create oeps-db",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
+    "db:schema:local": "wrangler d1 execute DB --local --file=./migrations/0001_initial_schema.sql",
+    "admin:create": "node scripts/create-admin.mjs",
+    "test": "node tests/integration.mjs",
+    "test:subpath": "node tests/subpath.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261031.1",
+    "@vladmandic/face-api": "^1.7.15",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "chart.js": "^4.5.1",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.42.0"
+  }
+}
